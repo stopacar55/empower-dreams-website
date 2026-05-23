@@ -1,0 +1,19 @@
+# Claude Code per-developer state
+.claude/settings.local.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs and temp
+*.log
+.tmp/

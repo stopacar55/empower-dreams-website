@@ -6,10 +6,10 @@ Hi Paul! Here's how to make the website live at empowerdreams.org.
 
 ### Step 1: Accept the GitHub Invitation
 - You should have received an email invitation to collaborate on the repository
-- Click the link to accept access to `bsvor/empower-dreams-website`
+- Click the link to accept access to `Empower-Dreams/empower-dreams-website`
 
 ### Step 2: Enable GitHub Pages
-1. Go to https://github.com/bsvor/empower-dreams-website/settings/pages
+1. Go to https://github.com/Empower-Dreams/empower-dreams-website/settings/pages
 2. Under **Source**, select **Deploy from a branch**
 3. Select the **main** branch and **/ (root)** folder
 4. Click **Save**
@@ -31,7 +31,7 @@ Hi Paul! Here's how to make the website live at empowerdreams.org.
    **For www (www.empowerdreams.org):**
    Add a CNAME record:
    ```
-   www -> bsvor.github.io
+   www -> empower-dreams.github.io
    ```
 
 3. Back on the GitHub Pages settings, check **Enforce HTTPS** (may take a few minutes to become available)
