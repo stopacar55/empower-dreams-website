@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Personal notes (not tracked in shared repo)
+ChangeNotes
+StartAChange
+
+# Editor / IDE noise
+.vscode/
+.idea/
+*.swp
+
+# Local-only Claude state (skills ARE committed; settings.local is per-machine)
+.claude/settings.local.json
