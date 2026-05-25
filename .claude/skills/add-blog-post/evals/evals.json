@@ -1,0 +1,20 @@
+{
+  "skill_name": "add-blog-post",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just got back from Uganda and wrote up a field report. Can you turn this into a blog post for our site? Date is March 5, 2026. Photos are in ~/PicturesForClaude as Mar5A.jpg and Mar5B.jpg. The text:\n\n'God is at work in the slums of Kampala. This week our team visited Sister Ruth's micro-loan group and saw 12 new mothers receive their first business kits. Three women have already paid off their first loan. Pray for them and consider becoming a monthly partner at empowerdreams.org/donate.'",
+      "expected_output": "A blog/<slug>.html file matching the existing template, with both Mar5A and Mar5B used as inline figures and a side-by-side composite created for the card. blog.html updated with a card in the correct chronological position above the existing 'An Audio Bible Doesn't Sit on a Shelf' (Feb 20, 2026) entry."
+    },
+    {
+      "id": 2,
+      "prompt": "Here's a Facebook post embed I want on the blog dated April 12, 2026:\n\n<iframe src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FEmpowerDreams.SocialMedia%2Fposts%2Fpfbid0xyz&show_text=true&width=500\" width=\"500\" height=\"671\"></iframe>\n\nNo images, just the text. Build the post and add it to the blog page.",
+      "expected_output": "Skill navigates to the iframe's permalink, extracts the post text from the DOM, builds a text-only blog/<slug>.html with no inline images, and inserts a card on blog.html. Since there are no images, the card uses a placeholder approach — either asks user for a thumbnail or skips images per the rules. Honors Standing Rules: shows git diff before commit."
+    },
+    {
+      "id": 3,
+      "prompt": "I have 5 designed slides for a year-end recap post dated December 31, 2025. Files are Dec31A through Dec31E.jpg in PicturesForClaude, plus Dec31CoverPicture.png for the card. Body text is just: 'A look back at God's faithfulness in 2025.' Title: '2025: Year of Faithfulness.'",
+      "expected_output": "blog/2025-year-of-faithfulness.html (or similar slug) built with all 5 slides interleaved in narrative order. Card on blog.html uses Dec31CoverPicture.png (renamed to <slug>-cover.png) since there are more than 2 images. Card inserted in correct chronological position. No side-by-side composite is created since a cover was provided."
+    }
+  ]
+}
