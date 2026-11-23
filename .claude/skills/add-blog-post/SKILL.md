@@ -256,3 +256,25 @@ empowerdreams.org automatically once merged.
 - `scripts/make_card_composite.py` — creates a side-by-side card image from two source images
 - `references/facebook-extraction.md` — how to pull post text from a Facebook iframe embed or permalink
 - `evals/evals.json` — sample test prompts (for iteration if needed)
+
+## Readable links for anything a person will read (Paul, 2026-11-23)
+
+When this skill produces or changes something meant to be read by a person (a document, report,
+brief, email draft, guide, manual, post, spreadsheet, deck, web page or PDF), finish by giving
+Paul a clickable link to a readable version of each one. He reads the outputs, not the terminal,
+and should never have to ask where the readable copy is.
+
+- **Link the form a person would open:** a PDF, a Word or Excel file, a rendered page or a
+  published URL. If only a Markdown source exists and it is longer than a short note, render a
+  PDF beside it with the project's own build script (or pandoc or headless Chrome) and link the
+  PDF; mention the Markdown only as the source.
+- **Make the link clickable:** a Markdown link whose target is the path relative to the session's
+  working folder, for example `[Brief (PDF)](docs/brief.pdf)`. For a file outside the session's
+  folders (a shared drive, Downloads, another project), give the complete absolute path in one
+  piece and say plainly where it is.
+- **Published or pushed work** (a live page, a pull request, a Google Doc or Sheet): give the
+  full URL.
+- **Short pieces he should read now** (an email draft, a post, a short answer): put the full text
+  in the reply as well as in the file.
+- **Not for code, scripts, configuration, logs, or data files only a program reads.** Refer to
+  those by path as usual; do not render or link "readable" copies of them.
